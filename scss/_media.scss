@@ -1,0 +1,158 @@
+// Tablets and Smaller
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  #contact {
+    &-a {
+      .text-input {
+        border: 1px solid $main-color;
+      }
+    }
+  }
+}
+
+// Smartphons
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #header {
+    &-home,
+    &-inner {
+      height: 13rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 54%;
+
+      .header-content {
+        display: none;
+      }
+    }
+  }
+
+  // Stack Grid Columns
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-d .testimonials,
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  #home {
+    &-b {
+      .stats div {
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  // About
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          "bioimage"
+          "bio"
+          "info1"
+          "info2"
+          "info3";
+      }
+    }
+
+    &-b {
+      h3 {
+        margin-left: 1rem;
+
+        .icon {
+          display: none;
+        }
+      }
+      .progress {
+        div {
+          animation: fill-in 4s forwards 5s ease-in;
+        }
+      }
+    }
+  }
+
+  // Contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message"
+          "submit";
+      }
+
+      button[type="submit"] {
+        width: 80%;
+      }
+    }
+
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+
+        div {
+          padding: 1.5rem;
+
+          h3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+}
+
+// Landscape Mobile
+@media (max-height: 640px) {
+  #header-home {
+    .header-content {
+      padding-top: 1rem;
+
+      h1 {
+        font-size: 3.1rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .btn-light {
+        display: none;
+      }
+    }
+  }
+}
